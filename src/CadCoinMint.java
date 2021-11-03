@@ -9,7 +9,7 @@ public class CadCoinMint extends CoinMint {
 				}
 			}
 		}
-		
+
 		return uniqueInstance;
 	}
 }

@@ -1,4 +1,5 @@
 public class EurCoinMint extends CoinMint {
+
 	private volatile static EurCoinMint uniqueInstance;
 	
 	public static EurCoinMint getInstance() {

@@ -9,7 +9,7 @@ public class GbpCoinMint extends CoinMint {
 				}
 			}
 		}
-		
+    
 		return uniqueInstance;
 	}
 }

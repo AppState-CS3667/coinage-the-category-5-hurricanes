@@ -1,6 +1,9 @@
 # Compiled class file
 *.class
 
+# Using this so I can commit on my windows machine
+.gitattributes
+
 # Log file
 *.log
 
