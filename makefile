@@ -1,5 +1,7 @@
 JUNIT=./lib/junit-platform-console-standalone-1.2.0.jar
 RUNNER=org.junit.platform.console.ConsoleLauncher
+CHECKSTYLE=./lib/checkstyle-5.5-all.jar
+STYLE_PATH=./assets/xml/mystle.xml
 
 default:
 	@echo "usage: make target"
@@ -24,4 +26,4 @@ clean:
 	rm -rf ./bin/*.class
 
 check: mystyle.xml 
-	mystyle.xml ./src/*.java
+	java $(CHECKSTYLE) -c $(STYLE_PATH) ./src/*.java
