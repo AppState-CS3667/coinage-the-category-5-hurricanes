@@ -7,11 +7,11 @@ public class Demo{
 	}
 
 	public Demo(String name){
-		this.name = name;
+		this.dummyName = name;
 	}
 		
 	public String getName(){
-		return this.name;
+		return this.dummyName;
 	}
 }
 

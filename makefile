@@ -1,4 +1,4 @@
-JUNIT=lib/junit-platform-console-standalone-1.2.0.jar
+JUNIT=./lib/junit-platform-console-standalone-1.2.0.jar
 RUNNER=org.junit.platform.console.ConsoleLauncher
 CHECKSTYLE=lib/checkstyle-5.5-all.jar
 STYLE_PATH=assets/xml/mystyle.xml
@@ -13,16 +13,16 @@ default:
 
 compile-all:
 	javac -d ./bin src/*.java
-	javac -d ./bin -cp .:bin:$(JUNIT) src/tests/*.java
+	javac -d ./bin -cp .:bin:$(JUNIT) tests/*.java
 
 compile-src:
 	javac -d ./bin src/*.java
 
-compile-tests:
-	javac -d ./bin -cp .:bin:$(JUNIT) src/tests/*.java
+compile-tests: $(JUNIT)
+	javac --class-path ./bin --class-path $(JUNIT) --class-path . -d ./bin ./tests/*.java 
 
 test: $(JUNIT)
-	java -cp .:$(JUNIT):bin $(RUNNER) --scan-class-path 
+	java -cp .:$(JUNIT) $(RUNNER) --scan-class-path 
 
 demo: Demo.java
 	java Demo
