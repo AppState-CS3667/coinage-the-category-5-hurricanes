@@ -1,1 +1,3 @@
-temp
+public class Demo {
+	
+}

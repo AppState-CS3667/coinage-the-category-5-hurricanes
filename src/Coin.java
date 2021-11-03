@@ -1,5 +1,5 @@
 
-public abstract Coin {
+public abstract class Coin {
 	private String countryCode;
 	private int denomination;
 	private String commonName;
