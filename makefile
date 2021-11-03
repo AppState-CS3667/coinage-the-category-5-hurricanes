@@ -1,5 +1,7 @@
 JUNIT=./lib/junit-platform-console-standalone-1.2.0.jar
 RUNNER=org.junit.platform.console.ConsoleLauncher
+CHECKSTYLE=lib/checkstyle-5.5-all.jar
+STYLE_PATH=assets/xml/mystyle.xml
 
 default:
 	@echo "usage: make target"
@@ -9,13 +11,18 @@ default:
 	@echo "___check - ruins your life with checkstyle"
 	
 
-compile:
+compile-all:
+	javac -d ./bin src/*.java
+	javac -d ./bin -cp .:bin:$(JUNIT) tests/*.java
+
+compile-src:
 	javac -d ./bin src/*.java
 
+compile-tests: $(JUNIT)
+	javac --class-path ./bin --class-path $(JUNIT) --class-path . -d ./bin ./tests/*.java 
 
-
-test:
-	java -cp .:$(JUNIT):./bin $(RUNNER) --scan-class-path 
+test: $(JUNIT)
+	java -cp .:$(JUNIT) $(RUNNER) --scan-class-path 
 
 demo: Demo.java
 	java Demo
@@ -23,5 +30,5 @@ demo: Demo.java
 clean:
 	rm -rf ./bin/*.class
 
-check: mystyle.xml 
-	mystyle.xml ./src/*.java
+check:
+	java -jar $(CHECKSTYLE) -c $(STYLE_PATH) ./src/*.java
