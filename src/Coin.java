@@ -1,10 +1,10 @@
 
 public abstract class Coin {
 	private String countryCode;
-	private int denomination;
+	private double denomination;
 	private String commonName;
 	private String smelt;
-	public Coin(String cc, int dnom, String cName, String _smelt) {
+	public Coin(String cc, double dnom, String cName, String _smelt) {
 		countryCode = cc;
 		denomination = dnom;
 		commonName = cName;
@@ -12,6 +12,6 @@ public abstract class Coin {
 	}
 	public String getSmelt() { return smelt; }
 	public String getcommonName() { return commonName; }
-	public int getDenom() { return denomination; }
+	public double getDenom() { return denomination; }
 	public String getCountryCode() { return countryCode; }
 }
