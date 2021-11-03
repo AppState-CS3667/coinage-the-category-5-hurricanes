@@ -1,5 +1,6 @@
 public class EurCoinMint extends CoinMint {
-	private volatile static UsdCoinMint uniqueInstance;
+
+	private volatile static EurCoinMint uniqueInstance;
 	
 	public static EurCoinMint getInstance() {
 		if (uniqueInstance == null) {
@@ -9,5 +10,7 @@ public class EurCoinMint extends CoinMint {
 				}
 			}
 		}
+
+		return uniqueInstance;
 	}
 }

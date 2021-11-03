@@ -14,4 +14,3 @@ public class Demo{
 		return this.dummyName;
 	}
 }
-

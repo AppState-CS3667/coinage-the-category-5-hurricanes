@@ -1,4 +1,4 @@
-public class UsdCointMint extends CoinMint {
+public class UsdCoinMint extends CoinMint {
 	private volatile static UsdCoinMint uniqueInstance;
 	
 	public static UsdCoinMint getInstance() {
@@ -9,5 +9,7 @@ public class UsdCointMint extends CoinMint {
 				}
 			}
 		}
+		
+		return uniqueInstance;
 	}
 }
