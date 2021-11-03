@@ -10,6 +10,7 @@ public abstract Coin {
 		denomination = dnom;
 		commonName = cName;
 		mint = _mint;
+		smelt = _smelt;
 	}
 	public String getSmelt() { return smelt; }
 	public CoinMint getmint() { return mint; }
