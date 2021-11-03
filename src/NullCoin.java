@@ -9,6 +9,6 @@ public NullCoin extends Coin {
 	public String getSmelt() { return ""; }
 	public String getmint() { return ""; }
 	public String getcommonName() { return ""; }
-	public int getDenom() { return 0; }
+	public double getDenom() { return 0; }
 	public String getCountryCode() { return ""; }
 }
