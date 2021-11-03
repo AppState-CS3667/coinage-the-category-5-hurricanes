@@ -12,6 +12,6 @@ public abstract Coin {
 		mint = _mint;
 	}
 	public getSmelt() {
-		return smelt
+		return smelt;
 	}
 }
