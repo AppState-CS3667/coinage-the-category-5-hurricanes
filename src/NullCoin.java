@@ -3,7 +3,7 @@ public NullCoin extends Coin {
 	private static NullCoin n = new NullCoin();
 	private NullCoin() {
 	}
-	public NullCoin getInstance() {
+	public static NullCoin getInstance() {
 		return n;
 	}
 	public String getSmelt() { return ""; }
