@@ -11,13 +11,18 @@ default:
 	@echo "___check - ruins your life with checkstyle"
 	
 
-compile:
+compile-all:
+	javac -d ./bin src/*.java
+	javac -d ./bin -cp .:bin:$(JUNIT) src/tests/*.java
+
+compile-src:
 	javac -d ./bin src/*.java
 
+compile-tests:
+	javac -d ./bin -cp .:bin:$(JUNIT) src/tests/*.java
 
-
-test:
-	java -cp .:$(JUNIT):./bin $(RUNNER) --scan-class-path 
+test: $(JUNIT)
+	java -cp .:$(JUNIT):bin $(RUNNER) --scan-class-path 
 
 demo: Demo.java
 	java Demo
