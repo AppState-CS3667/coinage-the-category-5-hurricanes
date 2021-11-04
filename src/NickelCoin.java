@@ -1,6 +1,6 @@
 package src;
 
-public NickelCoin extends coin {
+public class NickelCoin extends Coin {
 	public NickelCoin(bool _fail) {
 		bool fail = _fail;
 		double deno = .05;

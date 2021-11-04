@@ -1,5 +1,5 @@
 
-public ToonieCoin extends coin {
+public class ToonieCoin extends coin {
 	public ToonieCoin(boolean _fail) {
 		boolean fail = _fail;
 		double deno = 2.0;

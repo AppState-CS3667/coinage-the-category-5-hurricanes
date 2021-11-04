@@ -1,5 +1,6 @@
+package src;
 
-public DimeCoin extends coin {
+public class DimeCoin extends coin {
 	public DimeCoin(bool _fail) {
 		bool fail = _fail;
 		double deno = .10;
