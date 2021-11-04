@@ -1,6 +1,6 @@
 package src;
 
-public QuarterCoin extends coin {
+public class QuarterCoin extends Coin {
 	public QuarterCoin(bool _fail) {
 		bool fail = _fail;
 		double deno = .25;
