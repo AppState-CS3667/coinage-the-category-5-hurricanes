@@ -87,4 +87,21 @@ public class CoinMintTest{
         }
     }
 
+    @Test
+    public static void testSmoothe(){
+        prefix = "Buffing the metal. This won't remain shiny for long.";
+        Processes process = Processes.SMOOTHE;
+        for (int i = 0; i < 1000; i+=){
+            testMint.inspect();
+            if (testMint.getFail()){
+                String suffix = String.format(("Oh no! The %s process failed!", process.toString()));
+                expectedOutput = prefix + suffix;
+                testMint.resetFail();
+            }else{
+                expectedOutput = prefix;
+            }
+            checkResult();
+        }
+    }
+
 }
