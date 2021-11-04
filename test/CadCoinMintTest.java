@@ -69,7 +69,7 @@ public class CadCoinMintTest{
     
     @Test
     public static void testMakeCadNickel() {
-    	Coin cn = oneMint.makeCoin(0.50);
+    	Coin cn = oneMint.makeCoin(0.05);
     	
     	assertTrue(cn.instanceOf(CadNickelCoin));
     }
