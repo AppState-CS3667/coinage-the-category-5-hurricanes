@@ -1,10 +1,7 @@
-public class Quarter extends coin{
+package src;
+
+public class Quarter extends Coin {
 	public Quarter(boolean _fail){
-		boolean fail = _fail;
-		double deno = 0.25;
-		String commonName = "Quarter"
-		String cc = "USD";
-		String smelt = "91.67% Cu 8.33% Ni";
-		super(cc, deno, commonName, smelt, fail);
+		super("USD", 0.25, "Quarter", "91.67% Cu 8.33% Ni", _fail);
 	}
 }
