@@ -1,3 +1,4 @@
+package src;
 
 public QuarterCoin extends coin {
 	public QuarterCoin(bool _fail) {

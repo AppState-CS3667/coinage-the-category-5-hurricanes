@@ -1,3 +1,5 @@
+package src;
+
 public class CadCoinMint extends CoinMint {
 	private volatile static CadCoinMint uniqueInstance;
 	

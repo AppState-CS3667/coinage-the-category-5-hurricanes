@@ -1,3 +1,4 @@
+package src;
 
 public LooineCoin extends coin {
 	public LoonieCoin(boolean _fail) {

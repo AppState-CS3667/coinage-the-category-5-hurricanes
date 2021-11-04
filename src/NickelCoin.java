@@ -1,3 +1,4 @@
+package src;
 
 public NickelCoin extends coin {
 	public NickelCoin(bool _fail) {
