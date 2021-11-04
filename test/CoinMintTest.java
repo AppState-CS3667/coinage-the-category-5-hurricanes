@@ -1,3 +1,3 @@
-public class CoinMinTest{
+public class CoinMintTest{
 
 }
