@@ -28,6 +28,10 @@ public class CadCointMintTest{
 
     }
 
+    public static void checkResult(){
+        assertTrue(oneMint == anotherMint);
+    }
+
 }
 
 class InstanceJob implements Runnable{
@@ -43,7 +47,7 @@ class InstanceJob implements Runnable{
         if(coin == 1)
             anotherMint = CadCoinMint.getInstance();
         if(CadCoinMintTest.globalCounter % 3 == 0)
-            checkResult();
+            CadCoinMintTest.checkResult();
 
     }
 }
