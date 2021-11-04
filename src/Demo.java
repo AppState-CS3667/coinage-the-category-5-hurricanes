@@ -8,7 +8,7 @@ public class Demo {
 		
 		Coin coin = null;
 		
-		System.out.println("\nMaking a Dollar coin.\n========================================");
+		System.out.println("Making a Dollar coin.\n========================================");
 		coin = usdmint.makeCoin(1);
 		System.out.println(coin);
 		
@@ -61,7 +61,7 @@ public class Demo {
 		Coin failCoin = usdmint.makeCoin(0.25);
 		
 		while (!failCoin.getFail()) {
-			failCoin = usdmint.makeCoin(0.25)
+			failCoin = usdmint.makeCoin(0.25);
 		}
 		
 		System.out.println(failCoin);

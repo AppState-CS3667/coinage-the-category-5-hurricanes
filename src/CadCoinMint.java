@@ -23,28 +23,28 @@ public class CadCoinMint extends CoinMint {
 		smoothe();
 		buff();
 		
-		if (denom == 2 ) {
-			return new ToonieCoin(fail);
+		if (denom == 2) {
+			return new Toonie(fail);
 		}
 		
 		else if (denom == 1) {
-			return new LoonieCoin(fail);
+			return new Loonie(fail);
 		}
 		
 		else if (denom == 0.50) {
-			return new FiftyCentCoin(fail);
+			return new FiftyCent(fail);
 		}
 		
 		else if (denom == 0.25) {
-			return new CadQuarterCoin(fail);
+			return new CadQuarter(fail);
 		}
 		
 		else if (denom == 0.10) {
-			return new CadDimeCoin(fail);
+			return new CadDime(fail);
 		}
 		
 		else if (denom == 0.05) {
-			return new CadNickelCoin(fail);
+			return new CadNickel(fail);
 		}
 		
 		else {
