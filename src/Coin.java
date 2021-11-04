@@ -4,8 +4,8 @@ public abstract class Coin {
 	private double denomination;
 	private String commonName;
 	private String smelt;
-	private bool fail;
-	public Coin(String cc, double dnom, String cName, String _smelt, _fail) {
+	private boolean fail;
+	public Coin(String cc, double dnom, String cName, String _smelt,boolean _fail) {
 		countryCode = cc;
 		denomination = dnom;
 		commonName = cName;
@@ -16,7 +16,7 @@ public abstract class Coin {
 	public String getCommonName() { return commonName; }
 	public double getDenom() { return denomination; }
 	public String getCountryCode() { return countryCode; }
-	public bool getFail() { return fail; }
+	public boolean getFail() { return fail; }
 	public String toString() {
 		String s = "Country Code: " + countryCode + "\nValue = " + denomination + "\nName: " 
 				+ commonName + "\nSmelting Specs: " + smelt
