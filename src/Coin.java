@@ -1,3 +1,4 @@
+package org.mint;
 
 public abstract class Coin {
 	private String countryCode;

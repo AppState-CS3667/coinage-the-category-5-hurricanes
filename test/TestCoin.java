@@ -32,10 +32,12 @@ public class TestCoin {
         ExecutorService tpool = Executors.newFixedThreadPool(100);
         for(int i = 0; i < 100; ++i){
             Future<Coin> oneResult = tpool.submit(()->{
+                Thread.sleep(10);
                 return NullCoin.getInstance();
             });
 
             Future<Coin> anotherResult = tpool.submit(()->{
+                Thread.sleep(10);
                 return NullCoin.getInstance();
             });
 
@@ -45,7 +47,7 @@ public class TestCoin {
     }
 
 
-	public static testGetSmelt() { 
+	public static void testGetSmelt() { 
         expectedOutput = nullOutput;
         actualOutput = testCoin.getSmelt();
 
