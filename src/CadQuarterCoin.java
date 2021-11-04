@@ -1,3 +1,4 @@
+package src;
 
 public CadQuarterCoin extends coin {
 	public CadQuarterCoin(boolean _fail) {

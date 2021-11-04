@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class CadCointMintTest{
+public class CadCoinMintTest{
 
     public volatile static globalCounter = 0; //this is to keep track
                                     // of how many attempts to access

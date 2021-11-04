@@ -1,3 +1,4 @@
+package src;
 
 public FiftyCentCoin extends coin {
 	public FiftyCentCoin(boolean _fail) {

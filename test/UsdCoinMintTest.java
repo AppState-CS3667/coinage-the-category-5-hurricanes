@@ -38,7 +38,7 @@ class InstanceJob implements Runnable{
 
     public void run(){
 
-        UsdCointMintTest.globalCounter++;
+        UsdCoinMintTest.globalCounter++;
 
         Random rand = new Random()
         int coin = rand.nextInt(2);
