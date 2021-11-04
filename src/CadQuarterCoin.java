@@ -1,6 +1,6 @@
 
 public CadQuarterCoin extends coin {
-	public CadQuarterCoin(bool _fail) {
+	public CadQuarterCoin(boolean _fail) {
 		boolean fail = _fail;
 		double deno = .25;
 		String commonName = "Quarter"

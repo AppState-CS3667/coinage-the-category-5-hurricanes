@@ -1,6 +1,6 @@
 
 public LooineCoin extends coin {
-	public LoonieCoin(bool _fail) {
+	public LoonieCoin(boolean _fail) {
 		boolean fail = _fail;
 		double deno = 1.0;
 		String commonName = "Loonie"
