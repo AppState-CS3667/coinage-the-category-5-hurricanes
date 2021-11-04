@@ -11,8 +11,8 @@ public abstract class CoinMint {
 	protected boolean fail = false;
 	private Random rand = new Random();
 
-	public void resetFail() {
-		fail = false;
+	public void resetFail() { // what if two different users of the mint 
+		fail = false;		 // are accessing fail from different threads? -pd
 	}
 
 	public boolean getFail(){
