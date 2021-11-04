@@ -44,7 +44,7 @@ public abstract class CoinMint {
 				fail = true;
 			}
 	
-			failCheck(Processes.SMOOTHE;);
+			failCheck(Processes.SMOOTHE);
 		}
 	}
 	
