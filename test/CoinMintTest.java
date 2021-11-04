@@ -39,12 +39,22 @@ public class CoinMintTest{
 
     @Test
     public static void testManufacture(){
-        prefix = "Smelting some amount of metal...\n";
-        testMint.manufacture();
+        Processes process = Processes.;
+        for (int i = 0; i < 1000; i+=){
+            testMint.inspect();
+            if (testMint.getFail()){
+                String suffix = String.format(("Oh no! The %s process failed!", process.toString()));
+                expectedOutput = prefix + suffix;
+                testMint.resetFail();
+            }else{
+                expectedOutput = prefix;
+            }
+            checkResult();
+        }
     }
 
     @Test 
-    public static void testInspectPass(){
+    public static void testInspect(){
         prefix = "Inspecting the coin...\n";
         Processes process = Processes.INSPECT;
         for (int i = 0; i < 1000; i+=){
@@ -52,6 +62,7 @@ public class CoinMintTest{
             if (testMint.getFail()){
                 String suffix = String.format(("Oh no! The %s process failed!", process.toString()));
                 expectedOutput = prefix + suffix;
+                testMint.resetFail();
             }else{
                 expectedOutput = prefix;
             }
@@ -59,5 +70,21 @@ public class CoinMintTest{
         }
     }
     
+    @Test
+    public static void testBuff(){
+        prefix = "Buffing the metal. This won't remain shiny for long.";
+        Processes process = Processes.BUFF;
+        for (int i = 0; i < 1000; i+=){
+            testMint.inspect();
+            if (testMint.getFail()){
+                String suffix = String.format(("Oh no! The %s process failed!", process.toString()));
+                expectedOutput = prefix + suffix;
+                testMint.resetFail();
+            }else{
+                expectedOutput = prefix;
+            }
+            checkResult();
+        }
+    }
 
 }
