@@ -30,19 +30,19 @@ public class CadCoinMint extends CoinMint {
 		}
 		
 		else if (denom == 0.50) {
-			return new FiftyCent(fail);
+			return new FiftyCentCoin(fail);
 		}
 		
 		else if (denom == 0.25) {
-			return new CADQuarter(fail);
+			return new CadQuarterCoin(fail);
 		}
 		
 		else if (denom == 0.10) {
-			return new CADDime(fail);
+			return new CadDimeCoin(fail);
 		}
 		
 		else if (denom == 0.05) {
-			return new CADDNickel(fail);
+			return new CadNickelCoin(fail);
 		}
 		
 		else {
