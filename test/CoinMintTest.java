@@ -6,9 +6,6 @@ import org.junit.jupiter.api.AfterEach;
 import java.io.PrintStream;
 import java.io.ByteArrayOutputStream;
 
-private final PrintStream originalOut = System.out;
-private static ByteArrayOutputStream baos;
-private static PrintStream newOut;
 
 
 public class CoinMintTest{
@@ -18,6 +15,10 @@ public class CoinMintTest{
     private static String actualOutput;
     private static String process;
     private String prefix;
+
+    private final PrintStream originalOut = System.out;
+    private static ByteArrayOutputStream baos;
+    private static PrintStream newOut;
 
     @BeforeEach
     public static void setUp(){
