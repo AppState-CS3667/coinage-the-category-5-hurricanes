@@ -12,6 +12,6 @@ public class NullCoin extends Coin {
 	public String getCommonName() { return ""; }
 	public double getDenom() { return 0; }
 	public String getCountryCode() { return ""; }
-	public bool getFail() {return false; }
+	public boolean getFail() {return false; }
 	public String toString() { return ""; }
 }
