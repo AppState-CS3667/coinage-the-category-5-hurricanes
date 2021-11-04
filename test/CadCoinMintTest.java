@@ -31,7 +31,48 @@ public class CadCointMintTest{
     public static void checkResult(){
         assertTrue(oneMint == anotherMint);
     }
-
+    
+    @Test
+    public static void testMakeToonieCoin() {
+    	Coin tc = oneMint.makeCoin(2);
+    	
+    	assertTrue(tc.instanceOf(ToonieCoin));
+    }
+    
+    @Test
+    public static void testMakeLoonieCoin() {
+    	Coin lc = oneMint.makeCoin(1);
+    	
+    	assertTrue(lc.instanceOf(LoonieCoin));
+    }
+    
+    @Test
+    public static void testMakeFiftyCent() {
+    	Coin fcc = oneMint.makeCoin(0.50);
+    	
+    	assertTrue(fcc.instanceOf(FiftyCentCoin));
+    }
+    
+    @Test
+    public static void testMakeCadQuarterCoin() {
+    	Coin cqc = oneMint.makeCoin(0.25);
+    	
+    	assertTrue(cqc.instanceOf(CadQuarterCoin));
+    }
+    
+    @Test
+    public static void testMakeCadDimeCoin() {
+    	Coin cdc = oneMint.makeCoin(0.10);
+    	
+    	assertTrue(cdc.instanceOf(CadDimeCoin));
+    }
+    
+    @Test
+    public static void testMakeCadNickel() {
+    	Coin cn = oneMint.makeCoin(0.50);
+    	
+    	assertTrue(cn.instanceOf(CadNickelCoin));
+    }
 }
 
 class InstanceJob implements Runnable{
