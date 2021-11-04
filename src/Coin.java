@@ -7,7 +7,7 @@ public abstract class Coin {
 	private String smelt;
 
 	private boolean fail;
-	public Coin(String cc, double dnom, String cName, String _smelt,boolean _fail) {
+	public Coin(String cc, double dnom, String cName, String _smelt, boolean _fail) {
 		countryCode = cc;
 		denomination = dnom;
 		commonName = cName;
