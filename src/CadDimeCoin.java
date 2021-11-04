@@ -1,9 +1,9 @@
 
-public ToonieCoin extends coin {
-	public ToonieCoin(bool _fail) {
+public CadDimeCoin extends coin {
+	public CadDimeCoin(bool _fail) {
 		boolean fail = _fail;
-		double deno = 2.0;
-		String commonName = "Toonie"
+		double deno = .10;
+		String commonName = "Dime"
 		String cc = "CAD";
 		String smelt = "Unknown";
 		super(cc, deno, commonName, smelt, fail);

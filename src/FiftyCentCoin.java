@@ -1,7 +1,7 @@
 
 public FiftyCentCoin extends coin {
 	public FiftyCentCoin(bool _fail) {
-		bool fail = _fail;
+		boolean fail = _fail;
 		double deno = .5;
 		String commonName = "FiftyCent"
 		String cc = "CAD";
