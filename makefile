@@ -13,13 +13,13 @@ default:
 
 compile-all:
 	javac -d ./bin src/*.java
-	javac -d ./bin -cp .:bin:$(JUNIT) tests/*.java
+	javac -d ./bin -cp .:bin:$(JUNIT) test/*.java
 
 compile-src:
 	javac -d ./bin src/*.java
 
 compile-tests: $(JUNIT)
-	javac --class-path ./bin --class-path $(JUNIT) --class-path . -d ./bin ./tests/*.java 
+	javac -cp .:$(JUNIT):bin/* -d ./bin ./test/*.java 
 
 test: $(JUNIT)
 	java -cp .:$(JUNIT) $(RUNNER) --scan-class-path 

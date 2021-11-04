@@ -1,4 +1,7 @@
+package src;
+
 public class UsdCoinMint extends CoinMint {
+
 	private volatile static UsdCoinMint uniqueInstance;
 	
 	public UsdCoinMint() {}

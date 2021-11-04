@@ -1,3 +1,4 @@
+package src;
 
 public abstract class Coin {
 	private String countryCode;
@@ -5,7 +6,7 @@ public abstract class Coin {
 	private String commonName;
 	private String smelt;
 	private bool fail;
-	public Coin(String cc, double dnom, String cName, String _smelt, _fail) {
+	public Coin(String cc, double dnom, String cName, String _smelt, bool _fail) {
 		countryCode = cc;
 		denomination = dnom;
 		commonName = cName;
