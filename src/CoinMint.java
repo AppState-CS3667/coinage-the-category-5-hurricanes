@@ -6,16 +6,6 @@ public abstract class CoinMint {
 
 		public DummyCoinMint(){}
 
-		public void failCheckPass(String process){
-			fail = false;
-			failCheck(process);
-		}
-
-		public void failCheckFail(String process){
-			fail = true;
-			failCheck(process);
-			resetFail();
-		}
 	}
 
 	protected boolean fail = false;
@@ -23,6 +13,10 @@ public abstract class CoinMint {
 
 	public void resetFail() {
 		fail = false;
+	}
+
+	public boolean getFail(){
+		return fail;
 	}
 	
 	public void manufacture() {
@@ -36,7 +30,7 @@ public abstract class CoinMint {
 			fail = true;
 		}
 		
-		failCheck("inspecting");
+		failCheck(Processes.INSPECT);
 	}
 	
 	public void smoothe() {
@@ -47,7 +41,7 @@ public abstract class CoinMint {
 				fail = true;
 			}
 	
-			failCheck("smoothing");
+			failCheck(Processes.SMOOTHE;);
 		}
 	}
 	
@@ -59,13 +53,13 @@ public abstract class CoinMint {
 				fail = true;
 			}
 			
-			failCheck("buffing");
+			failCheck(Processes.BUFF);
 		}
 	}
 	
-	public void failCheck(String process) {
+	public void failCheck(Processes process) {
 		if (fail) {
-			System.out.println("Oh no! The " + process + " process failed!");
+			System.out.println("Oh no! The " + process.toString() + " process failed!");
 		}
 	}
 }
