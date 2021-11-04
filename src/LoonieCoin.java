@@ -1,6 +1,6 @@
 package src;
 
-public class LooineCoin extends Coin {
+public class LoonieCoin extends Coin {
 	public LoonieCoin(boolean _fail) {
 		boolean fail = _fail;
 		double deno = 1.0;
