@@ -13,7 +13,7 @@ public abstract class CoinMint {
 	}
 	
 	public void inspect() {
-		System.out.println("Smelting some amount of metal...");
+		System.out.println("Inspecting the coin...");
 		
 		if (rand.nextInt(12) == 4) {
 			fail = true;
