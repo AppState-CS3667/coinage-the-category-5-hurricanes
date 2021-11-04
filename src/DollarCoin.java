@@ -1,4 +1,4 @@
-public DollarCoin extends coin{
+public class DollarCoin extends coin{
 	public DollarCoin(boolean _fail){
 		boolean fail = _fail;
 		double deno = 1.00;
