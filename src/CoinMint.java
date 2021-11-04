@@ -1,11 +1,25 @@
+package src;
+
 import java.util.Random;
 
+
 public abstract class CoinMint {
+	
+	class DummyCoinMint extends CoinMint{
+
+		public DummyCoinMint(){}
+
+	}
+
 	protected boolean fail = false;
 	private Random rand = new Random();
-	
-	public void resetFail() {
-		fail = false;
+
+	public void resetFail() { // what if two different users of the mint 
+		fail = false;		 // are accessing fail from different threads? -pd
+	}
+
+	public boolean getFail(){
+		return fail;
 	}
 	
 	public void manufacture() {
@@ -13,13 +27,13 @@ public abstract class CoinMint {
 	}
 	
 	public void inspect() {
-		System.out.println("Smelting some amount of metal...");
+		System.out.println("Inspecting the coin...");
 		
 		if (rand.nextInt(12) == 4) {
 			fail = true;
 		}
 		
-		failCheck("inspecting");
+		failCheck(Processes.INSPECT);
 	}
 	
 	public void smoothe() {
@@ -30,7 +44,7 @@ public abstract class CoinMint {
 				fail = true;
 			}
 	
-			failCheck("smoothing");
+			failCheck(Processes.SMOOTHE);
 		}
 	}
 	
@@ -42,13 +56,13 @@ public abstract class CoinMint {
 				fail = true;
 			}
 			
-			failCheck("buffing");
+			failCheck(Processes.BUFF);
 		}
 	}
 	
-	public void failCheck(String process) {
+	public void failCheck(Processes process) {
 		if (fail) {
-			System.out.println("Oh no! The " + process + " process failed!");
+			System.out.println("Oh no! The " + process.toString() + " process failed!");
 		}
 	}
 }
