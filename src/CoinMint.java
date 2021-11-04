@@ -1,9 +1,26 @@
 import java.util.Random;
 
 public abstract class CoinMint {
+	
+	class DummyCoinMint extends CoinMint{
+
+		public DummyCoinMint(){}
+
+		public void failCheckPass(String process){
+			fail = false;
+			failCheck(process);
+		}
+
+		public void failCheckFail(String process){
+			fail = true;
+			failCheck(process);
+			resetFail();
+		}
+	}
+
 	protected boolean fail = false;
 	private Random rand = new Random();
-	
+
 	public void resetFail() {
 		fail = false;
 	}
