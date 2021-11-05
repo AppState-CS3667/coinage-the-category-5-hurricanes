@@ -24,8 +24,8 @@ compile-tests: $(JUNIT)
 test: $(JUNIT)
 	java -cp .:$(JUNIT) $(RUNNER) --scan-class-path 
 
-demo: Demo.java
-	java Demo
+demo: bin/Demo.class
+	java -classpath bin Demo 
 
 clean:
 	rm -rf ./bin/*.class
