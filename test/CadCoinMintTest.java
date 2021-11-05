@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class CadCoinMintTest {
 
-    public volatile static globalCounter = 0; //this is to keep track
+    public volatile static int globalCounter = 0; //this is to keep track
                                     // of how many attempts to access
                                     // getinstance have been made,
                                     // i don't particularly care

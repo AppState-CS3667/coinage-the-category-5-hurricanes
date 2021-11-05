@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class UsdCoinMintTest{
 
-    public volatile static globalCounter = 0; //this is to keep track
+    public volatile static int globalCounter = 0; //this is to keep track
                                     // of how many attempts to access
                                     // getinstance have been made,
                                     // i don't particularly care
@@ -40,7 +40,7 @@ class InstanceJob implements Runnable{
 
         UsdCoinMintTest.globalCounter++;
 
-        Random rand = new Random()
+        Random rand = new Random();
         int coin = rand.nextInt(2);
         if(coin == 0)
             oneMint = UsdCoinMint.getInstance();

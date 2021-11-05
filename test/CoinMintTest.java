@@ -22,10 +22,8 @@ public class CoinMintTest{
 
     @BeforeEach
     public static void setUp(){
-        testMint = CoinMint.new DummyCoinMint();
-        private final PrintStream originalOut = System.out;
-        private static ByteArrayOutputStream baos;
-        private static PrintStream newOut;
+        testMint = new DummyCoinMint();
+        originalOut = System.out;
 
     }
 
@@ -39,25 +37,15 @@ public class CoinMintTest{
         String temp = actualOutput;
         System.out.flush();
         if ((actualOutput = baos.toString()) == null 
-        || actualOutput == "")
+        || actualOutput == ""){
             actualOutput = temp;
+	}
         assertEquals(expectedOutput, actualOutput);
     }
 
     @Test
     public static void testManufacture(){
-        Processes process = Processes.;
-        for (int i = 0; i < 1000; i+=){
-            testMint.inspect();
-            if (testMint.getFail()){
-                String suffix = String.format(("Oh no! The %s process failed!", process.toString()));
-                expectedOutput = prefix + suffix;
-                testMint.resetFail();
-            }else{
-                expectedOutput = prefix;
-            }
-            checkResult();
-        }
+
     }
 
     @Test 
