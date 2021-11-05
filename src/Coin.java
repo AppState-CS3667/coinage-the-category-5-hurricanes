@@ -1,10 +1,10 @@
 public abstract class Coin {
-	private String countryCode;
-	private double denomination;
-	private String commonName;
-	private String smelt;
-
-	private boolean fail;
+	protected String countryCode;
+	protected double denomination;
+	protected String commonName;
+	protected String smelt;
+	protected boolean fail;
+	
 	public Coin(String cc, double dnom, String cName, String _smelt, boolean _fail) {
 		countryCode = cc;
 		denomination = dnom;
