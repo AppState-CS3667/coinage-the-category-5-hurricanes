@@ -52,10 +52,10 @@ public class CoinMintTest{
     public static void testInspect(){
         prefix = "Inspecting the coin...\n";
         Processes process = Processes.INSPECT;
-        for (int i = 0; i < 1000; i+=){
+        for (int i = 0; i < 1000; i++){
             testMint.inspect();
             if (testMint.getFail()){
-                String suffix = String.format(("Oh no! The %s process failed!", process.toString()));
+                String suffix = String.format("Oh no! The %s process failed!", process.toString());
                 expectedOutput = prefix + suffix;
                 testMint.resetFail();
             }else{
@@ -69,10 +69,10 @@ public class CoinMintTest{
     public static void testBuff(){
         prefix = "Buffing the metal. This won't remain shiny for long.";
         Processes process = Processes.BUFF;
-        for (int i = 0; i < 1000; i+=){
+        for (int i = 0; i < 1000; i++){
             testMint.inspect();
             if (testMint.getFail()){
-                String suffix = String.format(("Oh no! The %s process failed!", process.toString()));
+                String suffix = String.format("Oh no! The %s process failed!", process.toString());
                 expectedOutput = prefix + suffix;
                 testMint.resetFail();
             }else{
@@ -86,10 +86,10 @@ public class CoinMintTest{
     public static void testSmoothe(){
         prefix = "Buffing the metal. This won't remain shiny for long.";
         Processes process = Processes.SMOOTHE;
-        for (int i = 0; i < 1000; i+=){
+        for (int i = 0; i < 1000; i++){
             testMint.inspect();
             if (testMint.getFail()){
-                String suffix = String.format(("Oh no! The %s process failed!", process.toString()));
+                String suffix = String.format("Oh no! The %s process failed!", process.toString());
                 expectedOutput = prefix + suffix;
                 testMint.resetFail();
             }else{
