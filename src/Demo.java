@@ -57,6 +57,7 @@ public class Demo {
 		System.out.println("\n\nMaking and printing quarters until one fails...\n");
 		
 		Coin failCoin = usdmint.makeCoin(0.25);
+		System.out.println("\n" + failCoin);
 		
 		while (!failCoin.getFail()) {
 			failCoin = usdmint.makeCoin(0.25);
