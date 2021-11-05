@@ -14,9 +14,9 @@ public class CoinMintTest{
     private static String expectedOutput;
     private static String actualOutput;
     private static String process;
-    private String prefix;
+    private static String prefix;
 
-    private final PrintStream originalOut = System.out;
+    private static final PrintStream originalOut = System.out;
     private static ByteArrayOutputStream baos;
     private static PrintStream newOut;
 

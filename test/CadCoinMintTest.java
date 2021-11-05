@@ -18,7 +18,7 @@ public class CadCoinMintTest {
 
         Thread[] tpool = new Thread[100];
         for(int i = 0; i < 100; i ++){
-            tpool[i] = new Thread(new InstanceJob());
+            tpool[i] = new Thread(new CadInstanceJob());
         }
 
         for (Thread t : tpool){
@@ -75,7 +75,7 @@ public class CadCoinMintTest {
     }
 }
 
-class InstanceJob implements Runnable{
+class CadInstanceJob implements Runnable{
 
     public void run(){
 

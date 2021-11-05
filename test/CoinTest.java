@@ -6,8 +6,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
 
-public class TestCoin {
-	private static Coin testCoin;
+public class CoinTest {
+    private static Coin testCoin;
     private static String expectedOutput;
     private static String actualOutput;
     private static final String nullOutput = "";

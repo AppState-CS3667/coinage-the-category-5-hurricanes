@@ -1,8 +1,8 @@
 public class UsdCoinTest{
 
-    public QuarterCoin quarter;
-    public NickelCoin nickel;
-    public DimeCoin dime;
+    public static QuarterCoin quarter;
+    public static NickelCoin nickel;
+    public static DimeCoin dime;
     public static UsdCoinMint testMint;
 
     public static final double QUARTER = .25d;

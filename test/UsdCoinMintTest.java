@@ -18,7 +18,7 @@ public class UsdCoinMintTest{
 
         Thread[] tpool = new Thread[100];
         for(int i = 0; i < 100; i ++){
-            tpool[i] = new Thread(new InstanceJob());
+            tpool[i] = new Thread(new UsdInstanceJob());
         }
 
         for (Thread t : tpool){
@@ -34,7 +34,7 @@ public class UsdCoinMintTest{
 
 }
 
-class InstanceJob implements Runnable{
+class UsdInstanceJob implements Runnable{
 
     public void run(){
 
@@ -50,4 +50,5 @@ class InstanceJob implements Runnable{
             UsdCoinMintTest.checkResult();
 
     }
-}
+ }
+
