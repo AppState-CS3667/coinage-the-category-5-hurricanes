@@ -54,14 +54,16 @@ public class Demo {
 		coin = cadmint.makeCoin(0.05);
 		System.out.println(coin);
 		
-		System.out.println("Making and printing quarters until one fails...");
+		System.out.println("\n\nMaking and printing quarters until one fails...\n");
 		
 		Coin failCoin = usdmint.makeCoin(0.25);
+		System.out.println("\n" + failCoin);
 		
 		while (!failCoin.getFail()) {
 			failCoin = usdmint.makeCoin(0.25);
+			System.out.println("\n" + failCoin + "\n");
 		}
 		
-		System.out.println(failCoin + "\n");
+		
 	}
 }
