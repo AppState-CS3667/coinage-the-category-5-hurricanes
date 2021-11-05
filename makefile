@@ -2,6 +2,7 @@ JUNIT=./lib/junit-platform-console-standalone-1.2.0.jar
 RUNNER=org.junit.platform.console.ConsoleLauncher
 CHECKSTYLE=lib/checkstyle-5.5-all.jar
 STYLE_PATH=assets/xml/mystyle.xml
+PKG=src/
 
 default:
 	@echo "usage: make target"
@@ -19,7 +20,7 @@ compile-src:
 	javac -d ./bin src/*.java
 
 compile-tests: $(JUNIT)
-	javac -cp '.:lib/*:bin/*' -d ./bin ./test/*.java 
+	javac -cp 'lib/*:bin' -d ./bin ./test/* 
 
 test: $(JUNIT)
 	java -cp .:$(JUNIT) $(RUNNER) --scan-class-path 
@@ -32,3 +33,4 @@ clean:
 
 check:
 	java -jar $(CHECKSTYLE) -c $(STYLE_PATH) ./src/*.java
+	java -jar $(CHECKSTYLE) -c $(STYLE_PATH) ./test/*.java
