@@ -1,4 +1,4 @@
-public class USDCoinTest{
+public class UsdCoinTest{
 
     public QuarterCoin quarter;
     public NickelCoin nickel;
@@ -22,8 +22,8 @@ public class USDCoinTest{
     @Test
     public static void testQuarter(){
         quarter = testMint.makeCoin(QUARTER);
-        assertEquals(quarter.getDenom(), .25);
-        assertTrue(quarter.getCommonName().equals("quarter"));
+        assertEquals(quarter.getDenom(), 0.25);
+        assertTrue(quarter.getCommonName().equals("Quarter"));
         assertTrue(quarter.getCountryCode().equals("USD"));
         assertTrue(quarter.getSmelt().equals("Unknown"));
     }
