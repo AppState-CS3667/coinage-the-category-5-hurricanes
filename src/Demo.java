@@ -62,6 +62,6 @@ public class Demo {
 			failCoin = usdmint.makeCoin(0.25);
 		}
 		
-		System.out.println(failCoin);
+		System.out.println(failCoin + "\n");
 	}
 }
