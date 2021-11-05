@@ -1,5 +1,3 @@
-package src;
-
 public abstract class Coin {
 	private String countryCode;
 	private double denomination;
