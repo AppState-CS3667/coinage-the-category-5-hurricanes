@@ -1,4 +1,9 @@
 import java.util.Random;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.AfterEach;
 
 public class UsdCoinMintTest{
 

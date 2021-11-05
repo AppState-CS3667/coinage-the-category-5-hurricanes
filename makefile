@@ -20,7 +20,7 @@ compile-src:
 	javac -d ./bin src/*.java
 
 compile-tests: $(JUNIT)
-	javac -cp 'lib/*:bin' -d ./bin ./test/* 
+	javac -cp 'lib/*;bin' -d ./bin ./test/* 
 
 test: $(JUNIT)
 	java -cp .:$(JUNIT) $(RUNNER) --scan-class-path 

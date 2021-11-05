@@ -1,4 +1,8 @@
 import java.util.Random;
+import org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.AfterEach;
 
 public class CadCoinMintTest {
 
@@ -36,28 +40,28 @@ public class CadCoinMintTest {
     public static void testMakeToonieCoin() {
     	Coin tc = oneMint.makeCoin(2);
     	
-    	assertTrue(tc.instanceOf(ToonieCoin));
+    	assertTrue(tc.instanceOf(Toonie));
     }
     
     @Test
     public static void testMakeLoonieCoin() {
     	Coin lc = oneMint.makeCoin(1);
     	
-    	assertTrue(lc.instanceOf(LoonieCoin));
+    	assertTrue(lc.instanceOf(Loonie));
     }
     
     @Test
     public static void testMakeFiftyCent() {
     	Coin fcc = oneMint.makeCoin(0.50);
     	
-    	assertTrue(fcc.instanceOf(FiftyCentCoin));
+    	assertTrue(fcc.instanceOf(FiftyCent));
     }
     
     @Test
     public static void testMakeCadQuarterCoin() {
     	Coin cqc = oneMint.makeCoin(0.25);
     	
-    	assertTrue(cqc.instanceOf(CadQuarterCoin));
+    	assertTrue(cqc.instanceOf(CadQuarter));
     }
     
     @Test

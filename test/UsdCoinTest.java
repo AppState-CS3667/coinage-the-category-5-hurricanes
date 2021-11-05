@@ -1,8 +1,14 @@
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.AfterEach;
+
 public class UsdCoinTest{
 
-    public static QuarterCoin quarter;
-    public static NickelCoin nickel;
-    public static DimeCoin dime;
+    public static Quarter quarter;
+    public static Nickel nickel;
+    public static Dime dime;
     public static UsdCoinMint testMint;
 
     public static final double QUARTER = .25d;
@@ -16,6 +22,14 @@ public class UsdCoinTest{
     @BeforeEach
     public static void setUp(){
         testMint = UsdCoinMint.getInstance();
+    }
+
+    @AfterEach
+    public static void cleanUp(){
+	testMint = null;
+	quarter = null;
+	dime = null;
+
     }
 
 
