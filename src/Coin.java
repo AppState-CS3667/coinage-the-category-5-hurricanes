@@ -1,5 +1,3 @@
-package src;
-
 public abstract class Coin {
 	private String countryCode;
 	private double denomination;
@@ -22,7 +20,7 @@ public abstract class Coin {
 	public String toString() {
 		String s = "Country Code: " + countryCode + "\nValue = " + denomination + "\nName: " 
 				+ commonName + "\nSmelting Specs: " + smelt
-				+ "\nDid coin pass inspection: " + fail;
+				+ "\nDid coin fail inspection: " + fail;
 		return s;
 	}
 }

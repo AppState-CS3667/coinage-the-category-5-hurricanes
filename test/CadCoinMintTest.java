@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class CadCoinMintTest{
+public class CadCoinMintTest {
 
     public volatile static globalCounter = 0; //this is to keep track
                                     // of how many attempts to access
@@ -81,7 +81,7 @@ class InstanceJob implements Runnable{
 
         CadCointMintTest.globalCounter++;
 
-        Random rand = new Random()
+        Random rand = new Random();
         int coin = rand.nextInt(2);
         if(coin == 0)
             oneMint = CadCoinMint.getInstance();

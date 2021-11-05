@@ -1,5 +1,3 @@
-package src;
-
 import java.util.Random;
 
 
@@ -50,7 +48,7 @@ public abstract class CoinMint {
 	
 	public void buff() {
 		if (!fail) {
-			System.out.println("Buffing the metal. This won't remain shiny for long.");
+			System.out.println("Buffing the metal... This won't remain shiny for long...");
 			
 			if (rand.nextInt(2000) == 39) {
 				fail = true;
