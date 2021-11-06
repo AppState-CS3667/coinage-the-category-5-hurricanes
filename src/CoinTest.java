@@ -6,6 +6,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
 import java.lang.String;
+import java.lang.InterruptedException;
+import java.util.concurrent.ExecutionException;
 
 public class CoinTest {
     private static Coin testCoin;
@@ -42,7 +44,13 @@ public class CoinTest {
                 return NullCoin.getInstance();
             });
 
-            assertTrue(oneResult.get() == anotherResult.get());
+            try{
+                assertTrue(oneResult.get() == anotherResult.get());
+            }catch(InterruptedException ie){
+                ie.printStackTrace();
+            }catch(ExecutionException ee){
+                ee.printStackTrace();
+            }
 
         }
     }

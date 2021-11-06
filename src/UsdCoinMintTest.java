@@ -47,9 +47,9 @@ class UsdInstanceJob implements Runnable{
         Random rand = new Random();
         int coin = rand.nextInt(2);
         if(coin == 0)
-            oneMint = UsdCoinMint.getInstance();
+            UsdCoinMintTest.oneMint = UsdCoinMint.getInstance();
         if(coin == 1)
-            anotherMint = UsdCoinMint.getInstance();
+            UsdCoinMintTest.anotherMint = UsdCoinMint.getInstance();
         if(UsdCoinMintTest.globalCounter % 3 == 0)
             UsdCoinMintTest.checkResult();
 

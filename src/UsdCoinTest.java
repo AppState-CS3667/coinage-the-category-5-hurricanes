@@ -6,9 +6,9 @@ import org.junit.jupiter.api.AfterEach;
 
 public class UsdCoinTest{
 
-    public static Quarter quarter;
-    public static Nickel nickel;
-    public static Dime dime;
+    public static Coin quarter;
+    public static Coin nickel;
+    public static Coin dime;
     public static UsdCoinMint testMint;
 
     public static final double QUARTER = .25d;

@@ -1,4 +1,3 @@
-package src;
 
 public class Dollar extends FormatCoin{
 	public Dollar(boolean _fail){

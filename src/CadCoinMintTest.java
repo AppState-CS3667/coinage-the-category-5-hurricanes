@@ -3,6 +3,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterEach;
+import java.lang.InterruptedException;
 
 public class CadCoinMintTest {
 
@@ -89,9 +90,9 @@ class CadInstanceJob implements Runnable{
         Random rand = new Random();
         int coin = rand.nextInt(2);
         if(coin == 0)
-            oneMint = CadCoinMint.getInstance();
+           CadCoinMintTest.oneMint = CadCoinMint.getInstance();
         if(coin == 1)
-            anotherMint = CadCoinMint.getInstance();
+            CadCoinMintTest.anotherMint = CadCoinMint.getInstance();
         if(CadCoinMintTest.globalCounter % 3 == 0)
             CadCoinMintTest.checkResult();
 
