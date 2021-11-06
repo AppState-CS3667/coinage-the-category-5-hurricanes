@@ -1,5 +1,4 @@
 import java.util.Random;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.Assert.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
@@ -21,8 +20,8 @@ public class UsdCoinMintTest{
     @Test
     public static void testGetInstance(){
 
-        Thread[] tpool = new Thread[100];
-        for(int i = 0; i < 100; i ++){
+        Thread[] tpool = new Thread[1000];
+        for(int i = 0; i < 1000; i ++){
             tpool[i] = new Thread(new UsdInstanceJob());
         }
 

@@ -1,4 +1,3 @@
-import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.Assert.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
@@ -6,6 +5,7 @@ import org.junit.jupiter.api.AfterEach;
 import java.util.concurrent.Executors; 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
+import java.lang.String;
 
 public class CoinTest {
     private static Coin testCoin;
@@ -25,7 +25,7 @@ public class CoinTest {
     }
 
     public static void checkResult(){
-        assertEquals(expectedOutput, actualOutput);
+        assertTrue(actualOutput.equals(expectedOutput));
     }
     
     @Test
@@ -58,8 +58,8 @@ public class CoinTest {
         expectedOutput = nullOutput;
     }
 	public static void testGetDenom() {
-        actualOutput = testCoin.getDenom();
-        expectedOutput = nullOutput;
+        actualOutput = String.valueOf(testCoin.getDenom());
+        expectedOutput = String.valueOf(0.0d);;
     }
 
 

@@ -13,8 +13,8 @@ default:
 	
 
 
-compile: bin/Toonie.class
-	javac -cp 'bin/*;lib/*' -d ./bin src/*.java
+compile:
+	javac -cp 'bin/*:lib/*' -d ./bin src/*.java
 
 
 test: $(JUNIT)

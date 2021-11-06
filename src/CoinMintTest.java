@@ -23,7 +23,8 @@ public class CoinMintTest{
     @BeforeEach
     public static void setUp(){
         testMint = new DummyCoinMint();
-        originalOut = System.out;
+        System.setOut((newOut = new PrintStream(
+                        (baos = new ByteArrayOutputStream()))));
 
     }
 

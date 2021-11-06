@@ -1,5 +1,5 @@
 import java.util.Random;
-import org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterEach;
@@ -37,7 +37,7 @@ public class CadCoinMintTest {
     }
     
     @Test
-    public static void testMakeToonieCoin() {
+    public static void testMakeToonie() {
     	Coin tc = oneMint.makeCoin(2);
 
     	
@@ -45,38 +45,38 @@ public class CadCoinMintTest {
     }
     
     @Test
-    public static void testMakeLoonieCoin() {
+    public static void testMakeLoonie() {
     	Coin lc = oneMint.makeCoin(1);
     	
-    	assertTrue(lc.instanceOf(Loonie));
+    	assertTrue(lc instanceof Loonie);
     }
     
     @Test
     public static void testMakeFiftyCent() {
     	Coin fcc = oneMint.makeCoin(0.50);
     	
-    	assertTrue(fcc.instanceOf(FiftyCent));
+    	assertTrue(fcc instanceof FiftyCent);
     }
     
     @Test
-    public static void testMakeCadQuarterCoin() {
+    public static void testMakeCadQuarter() {
     	Coin cqc = oneMint.makeCoin(0.25);
     	
-    	assertTrue(cqc.instanceOf(CadQuarter));
+    	assertTrue(cqc instanceof CadQuarter);
     }
     
     @Test
-    public static void testMakeCadDimeCoin() {
+    public static void testMakeCadDime() {
     	Coin cdc = oneMint.makeCoin(0.10);
     	
-    	assertTrue(cdc.instanceOf(CadDimeCoin));
+    	assertTrue(cdc instanceof CadDime);
     }
     
     @Test
     public static void testMakeCadNickel() {
     	Coin cn = oneMint.makeCoin(0.05);
     	
-    	assertTrue(cn.instanceOf(CadNickelCoin));
+    	assertTrue(cn instanceof CadNickel);
     }
 }
 
@@ -84,7 +84,7 @@ class CadInstanceJob implements Runnable{
 
     public void run(){
 
-        CadCointMintTest.globalCounter++;
+        CadCoinMintTest.globalCounter++;
 
         Random rand = new Random();
         int coin = rand.nextInt(2);
