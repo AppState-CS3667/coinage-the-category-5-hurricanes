@@ -12,15 +12,10 @@ default:
 	@echo "___check - ruins your life with checkstyle"
 	
 
-compile-all:
-	javac -d ./bin src/*.java
-	javac -d ./bin -cp .:bin:$(JUNIT) test/*.java
 
-compile-src:
-	javac -d ./bin src/*.java
+compile: bin/Toonie.class
+	javac -cp 'bin/*;lib/*' -d ./bin src/*.java
 
-compile-tests: $(JUNIT)
-	javac -cp 'lib/*;bin' -d ./bin ./test/* 
 
 test: $(JUNIT)
 	java -cp .:$(JUNIT) $(RUNNER) --scan-class-path 
