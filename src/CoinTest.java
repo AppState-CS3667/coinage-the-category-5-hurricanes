@@ -15,6 +15,8 @@ public class CoinTest {
     private static String actualOutput;
     private static final String nullOutput = "";
 
+    public CoinTest(){}
+
     @BeforeEach
     public static void setUp(){
         testCoin = NullCoin.getInstance();
@@ -55,22 +57,26 @@ public class CoinTest {
         }
     }
 
-
+    @Test
 	public static void testGetSmelt() { 
         expectedOutput = nullOutput;
         actualOutput = testCoin.getSmelt();
 
     }
+
+    @Test
 	public static void testGetCommonName() {
         actualOutput = testCoin.getCommonName();
         expectedOutput = nullOutput;
     }
+
+    @Test
 	public static void testGetDenom() {
         actualOutput = String.valueOf(testCoin.getDenom());
         expectedOutput = String.valueOf(0.0d);;
     }
 
-
+    @Test
 	public static void testGetCountryCode() {
         actualOutput = testCoin.getCountryCode();
         expectedOutput = nullOutput;

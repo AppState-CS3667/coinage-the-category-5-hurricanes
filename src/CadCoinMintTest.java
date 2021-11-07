@@ -18,6 +18,8 @@ public class CadCoinMintTest {
     public static CadCoinMint oneMint;
     public static CadCoinMint anotherMint;
 
+    public CadCoinMintTest(){}
+
     @Test
     public static void testGetInstance(){
 
@@ -33,6 +35,7 @@ public class CadCoinMintTest {
 
     }
 
+    @Test
     public static void checkResult(){
         assertTrue(oneMint == anotherMint);
     }
@@ -79,6 +82,7 @@ public class CadCoinMintTest {
     	
     	assertTrue(cn instanceof CadNickel);
     }
+
 }
 
 class CadInstanceJob implements Runnable{
