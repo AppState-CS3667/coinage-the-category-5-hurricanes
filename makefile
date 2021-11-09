@@ -23,7 +23,7 @@ test:
 	java -cp 'bin:$(JUNIT):bin/Tests.jar' $(RUNNER) --scan-class-path 
 
 demo:
-	java Demo 
+	java -cp bin Demo  
 
 clean:
 	rm -rf *.class
