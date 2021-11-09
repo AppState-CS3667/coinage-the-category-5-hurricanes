@@ -18,22 +18,22 @@ public class CoinTest {
     public CoinTest(){}
 
     @BeforeEach
-    public static void setUp(){
+    public void setUp(){
         testCoin = NullCoin.getInstance();
     }
 
     @AfterEach
-    public static void cleanUp(){
+    public void cleanUp(){
         checkResult();
         testCoin = null;
     }
 
-    public static void checkResult(){
+    public void checkResult(){
         assertTrue(actualOutput.equals(expectedOutput));
     }
     
     @Test
-    public static void testGetInstance(){
+    public void testGetInstance(){
         ExecutorService tpool = Executors.newFixedThreadPool(100);
         for(int i = 0; i < 100; ++i){
             Future<Coin> oneResult = tpool.submit(()->{
@@ -58,26 +58,26 @@ public class CoinTest {
     }
 
     @Test
-	public static void testGetSmelt() { 
+	public void testGetSmelt() { 
         expectedOutput = nullOutput;
         actualOutput = testCoin.getSmelt();
 
     }
 
     @Test
-	public static void testGetCommonName() {
+	public void testGetCommonName() {
         actualOutput = testCoin.getCommonName();
         expectedOutput = nullOutput;
     }
 
     @Test
-	public static void testGetDenom() {
+	public void testGetDenom() {
         actualOutput = String.valueOf(testCoin.getDenom());
         expectedOutput = String.valueOf(0.0d);;
     }
 
     @Test
-	public static void testGetCountryCode() {
+	public void testGetCountryCode() {
         actualOutput = testCoin.getCountryCode();
         expectedOutput = nullOutput;
     }
