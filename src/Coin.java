@@ -1,3 +1,4 @@
+
 public abstract class Coin {
 	protected String countryCode;
 	protected double denomination;

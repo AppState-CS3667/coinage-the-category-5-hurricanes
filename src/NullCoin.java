@@ -1,3 +1,4 @@
+
 public class NullCoin extends Coin {
 	private static NullCoin n = new NullCoin();
 	private NullCoin() {
