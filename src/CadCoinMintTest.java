@@ -21,7 +21,9 @@ public class CadCoinMintTest {
     public CadCoinMintTest(){}
 
     @Test
-    public static void testGetInstance(){
+    public void testGetInstance(){
+
+        oneMint = null;
 
         Thread[] tpool = new Thread[100];
         for(int i = 0; i < 100; i ++){
@@ -35,13 +37,24 @@ public class CadCoinMintTest {
 
     }
 
-    @Test
+
+
     public static void checkResult(){
         assertTrue(oneMint == anotherMint);
     }
+
+    @BeforeEach
+    public void initializeMint(){
+        oneMint = CadCoinMint.getInstance();
+    }
+
+    @AfterEach
+    public void destroyMint(){
+        oneMint = null;
+    }
     
     @Test
-    public static void testMakeToonie() {
+    public void testMakeToonie() {
     	Coin tc = oneMint.makeCoin(2);
 
     	
@@ -49,35 +62,35 @@ public class CadCoinMintTest {
     }
     
     @Test
-    public static void testMakeLoonie() {
+    public void testMakeLoonie() {
     	Coin lc = oneMint.makeCoin(1);
     	
     	assertTrue(lc instanceof Loonie);
     }
     
     @Test
-    public static void testMakeFiftyCent() {
+    public void testMakeFiftyCent() {
     	Coin fcc = oneMint.makeCoin(0.50);
     	
     	assertTrue(fcc instanceof FiftyCent);
     }
     
     @Test
-    public static void testMakeCadQuarter() {
+    public void testMakeCadQuarter() {
     	Coin cqc = oneMint.makeCoin(0.25);
     	
     	assertTrue(cqc instanceof CadQuarter);
     }
     
     @Test
-    public static void testMakeCadDime() {
+    public void testMakeCadDime() {
     	Coin cdc = oneMint.makeCoin(0.10);
     	
     	assertTrue(cdc instanceof CadDime);
     }
     
     @Test
-    public static void testMakeCadNickel() {
+    public void testMakeCadNickel() {
     	Coin cn = oneMint.makeCoin(0.05);
     	
     	assertTrue(cn instanceof CadNickel);

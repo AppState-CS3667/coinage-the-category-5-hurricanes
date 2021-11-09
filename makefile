@@ -1,6 +1,6 @@
-JUNIT=lib/junit-platform-console-standalone-1.2.0.jar
+JUNIT=junit-platform-console-standalone-1.2.0.jar
 RUNNER=org.junit.platform.console.ConsoleLauncher
-CHECKSTYLE=lib/checkstyle-5.5-all.jar
+CHECKSTYLE=checkstyle-5.5-all.jar
 STYLE_PATH=assets/xml/mystyle.xml
 PKG=src/
 
@@ -14,23 +14,19 @@ default:
 
 
 compile:
-	javac -cp 'bin/*:lib/*' -d ./bin src/*.java
+	javac -cp '.:$(JUNIT)' -d bin src/*.java
 
 
-test:
-	mv src/* .; mv bin/* .; mv $(JUNIT) .
-	jar cf Tests.jar *.class
-	ls
-	java -cp '.:Tests.jar:junit-platform-console-standalone-1.2.0.jar' $(RUNNER)  --select-class CadCoinMintTest --select-class CoinTest --select-class UsdCoinMintTest
 
-replace:
-	mv *.class bin; mv *.java src; mv junit-platform-console-standalone-1.2.0.jar lib
+test: 
+	jar cf bin/Test.jar bin/*.class
+	java -cp 'bin:$(JUNIT):bin/Tests.jar' $(RUNNER) --scan-class-path 
 
-demo: bin/Demo.class
-	java -classpath bin Demo 
+demo:
+	java Demo 
 
 clean:
-	rm -rf ./bin/*.class
+	rm -rf *.class
 
 check:
 	java -jar $(CHECKSTYLE) -c $(STYLE_PATH) ./src/*.java
