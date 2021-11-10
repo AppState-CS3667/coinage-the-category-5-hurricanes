@@ -1,13 +1,7 @@
 import java.util.Random;
 
-
 public abstract class CoinMint {
 	
-	class DummyCoinMint extends CoinMint{
-
-		public DummyCoinMint(){}
-
-	}
 
 	protected boolean fail = false;
 	private Random rand = new Random();

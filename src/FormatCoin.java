@@ -1,3 +1,5 @@
+
+
 public class FormatCoin extends Coin {
 	public FormatCoin(String cc, double dnom, String cName, String _smelt, boolean _fail) {
 		super(cc, dnom, cName, _smelt, _fail);
