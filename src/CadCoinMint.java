@@ -17,7 +17,8 @@ public class CadCoinMint extends CoinMint {
 	
 	public Coin makeCoin(double denom) {
 		fail = false;
-		manufacture();
+		smelt();
+		imprint();
 		inspect();
 		smoothe();
 		buff();

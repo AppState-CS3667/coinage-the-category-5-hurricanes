@@ -17,7 +17,8 @@ public class UsdCoinMint extends CoinMint {
 	}
 		
 	public Coin makeCoin(double denom) {
-		manufacture(denom);
+		smelt(denom);
+		imprint();
 		inspect();
 		smoothe();
 		buff();
@@ -51,7 +52,7 @@ public class UsdCoinMint extends CoinMint {
 		}
 	}
 	
-	public void manufacture(double denom) {
+	public void smelt(double denom) {
 		if (denom == 1) {
 			System.out.println("Smelting coin with:"
 					+ "\n\t88.5% Cu"
