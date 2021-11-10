@@ -18,7 +18,7 @@ public class UsdCoinMint extends CoinMint {
 		
 	public Coin makeCoin(double denom) {
 		smelt(denom);
-		imprint();
+		imprint(denom);
 		inspect();
 		smoothe();
 		buff();
@@ -83,4 +83,35 @@ public class UsdCoinMint extends CoinMint {
 			System.out.println("Smelting some amount of metal...");
 		}
 	}
+
+	public void imprint(double denom) {		
+		if (denom == 1) {
+			System.out.println("Imprinting coin with Dollar inscriptions...");
+		}
+		
+		else if (denom == 0.50) {
+			System.out.println("Imprinting coin with Half Dollar inscriptions...");
+		}
+		
+		else if (denom == 0.25) {
+			System.out.println("Imprinting coin with Quarter inscriptions...");
+		}
+		
+		else if (denom == 0.10) {
+			System.out.println("Imprinting coin with Dime inscriptions...");
+		}
+		
+		else if (denom == 0.05) {
+			System.out.println("Imprinting coin with Nickel inscriptions...");
+		}
+
+		else if (denom == 0.01) {
+			System.out.println("Imprinting coin with Penny inscriptions...");
+		}
+		
+		else {
+			System.out.println("Imprinting coin...");
+		}
+	}
+
 }

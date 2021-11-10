@@ -18,7 +18,7 @@ public class CadCoinMint extends CoinMint {
 	public Coin makeCoin(double denom) {
 		fail = false;
 		smelt();
-		imprint();
+		imprint(denom);
 		inspect();
 		smoothe();
 		buff();
@@ -49,6 +49,36 @@ public class CadCoinMint extends CoinMint {
 		
 		else {
 			return NullCoin.getInstance();
+		}
+	}
+
+	public void imprint(double denom) {
+		if (denom == 2) {
+			System.out.println("Imprinting coin with Toonie inscriptions...");
+		}
+		
+		else if (denom == 1) {
+			System.out.println("Imprinting coin with Loonie inscriptions...");
+		}
+		
+		else if (denom == 0.50) {
+			System.out.println("Imprinting coin with Fifty Cent inscriptions...");
+		}
+		
+		else if (denom == 0.25) {
+			System.out.println("Imprinting coin with Quarter inscriptions...");
+		}
+		
+		else if (denom == 0.10) {
+			System.out.println("Imprinting coin with Dime inscriptions...");
+		}
+		
+		else if (denom == 0.05) {
+			System.out.println("Imprinting coin with Nickel inscriptions...");
+		}
+		
+		else {
+			System.out.println("Imprinting coin...");
 		}
 	}
 }

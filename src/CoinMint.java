@@ -19,13 +19,7 @@ public abstract class CoinMint {
 	}
 
 	public void imprint() {
-		System.out.println("Stamping the metal...");
-
-		if (rand.nextInt(2000) == 39) {
-			fail = true;
-		}
-
-		failCheck(Processes.IMPRINT);
+		System.out.println("Imprinting coin...");
 	}
 	
 	public void inspect() {
