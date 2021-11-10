@@ -14,8 +14,18 @@ public abstract class CoinMint {
 		return fail;
 	}
 	
-	public void manufacture() {
+	public void smelt() {
 		System.out.println("Smelting some amount of metal...");
+	}
+
+	public void imprint() {
+		System.out.println("Stamping the metal...");
+
+		if (rand.nextInt(2000) == 39) {
+			fail = true;
+		}
+
+		failCheck(Processes.IMPRINT);
 	}
 	
 	public void inspect() {
