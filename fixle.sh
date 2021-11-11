@@ -1,4 +1,4 @@
-#####################
+#####################  ALL CREDIT HERE: https://gist.github.com/ajdruff/16427061a41ca8c08c05992a6c74f59e
 #
 # Use this with or without the .gitattributes snippet with this Gist
 # create a fixle.sh file, paste this in and run it.
