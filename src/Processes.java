@@ -1,5 +1,4 @@
-
-public enum Processes{
+public enum Processes {
     INSPECT,
     SMOOTHE,
     BUFF,

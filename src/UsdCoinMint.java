@@ -113,5 +113,4 @@ public class UsdCoinMint extends CoinMint {
 			System.out.println("Imprinting coin...");
 		}
 	}
-
 }
